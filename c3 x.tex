@@ -1,0 +1,219 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\input{preamble}
+\input{macros}
+
+\graphicspath{{./images/}}
+
+\title{\huge{C3 X}}
+\author{\huge{Jack Maguire}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\qs{
+\qsp{a}{
+	\[ y = \frac{x^2 - 6x + 12}{4x - 11} \]
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= 4x - 11 \\
+			v\prime &= 4 
+		\end{align*}
+		\pagebreak
+		\begin{align*}
+			u &= x^2 - 6x + 12 \\
+			u\prime &= 2x - 6
+		\end{align*}
+	\end{multicols}
+	\noindent
+	\begin{align*}
+		\differen &= \frac{vu\prime - v\prime u}{v^2} \\
+				  &= \frac{(4x-11)(2x-6) - 4(x^2-6x+12)}{(4x-11)^2} \\
+				  &= \frac{8x^2 -46x + 66 - 4x^2 + 24x - 48}{(4x-11)^2} \\
+				  &= \frac{4x^2 -22x + 18}{(4x-11)^2} \\
+				  &= \frac{4x^2 -22x + 18}{16x^2 - 88x + 121} \\
+	\end{align*}
+}
+\qsp{b}{
+	\(y\) is decreasing \(\therefore \differen < 0\)
+	
+	\[ \frac{4x^2 -22x + 18}{16x^2 - 88x + 121} < 0 \]
+	Since \( 16x^2 - 88x + 121 \) only has one repeated root, and is a positive curve, it will never go below zero, so we can ignore solutions from it.
+	
+	\begin{align*}
+		 \frac{4x^2 -22x + 18}{16x^2 - 88x + 121} &< 0 \\
+		 4x^2 -22x + 18 &< 0 \\
+		 (2x-1)(4x-9) &< 0 \\
+		 1 < x < 4.5 &
+	\end{align*}
+}
+}
+
+\qs{
+\begin{align*}
+	\sin 2\theta &= \cot \theta \\
+	2\sin \theta \cos \theta &= \frac{\cos \theta}{\sin \theta} \\
+	2\sin ^2 \theta \cos \theta &= \cos \theta \\
+	2\sin ^2 \theta \cos \theta - \cos \theta &= 0\\
+	\left( \cos \theta \right) \left(  2\sin ^2 \theta - 1  \right) &= 0
+\end{align*}
+\begin{multicols}{2}
+	\noindent
+	\begin{align*}
+		\cos \theta &= 0 \\
+		\theta &= 90 \dg
+	\end{align*}
+	\columnbreak
+	\begin{align*}
+		 2\sin ^2 \theta - 1 &= 0 \\
+		 \sin ^2 \theta &= \frac{1}{2} \\
+		 \sin \theta &= \pm \frac{\sqrt{2}}{2} \\
+		 \theta &= 45 \dg, 135 \dg
+	\end{align*}
+\end{multicols}
+\[ \theta = 45 \dg, 90 \dg, 135 \dg \]
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		&= \func{1 + \sqrt{9}} \\
+		&= \func{4} \\
+		&= 1 + \sqrt{4} \\
+		&= 3
+	\end{align*}
+}
+\qsp{b}{
+	\begin{align*}
+		y &= 1 + \sqrt{x} \\
+		x &= 1 + \sqrt{y} \\
+		x - 1 &= \sqrt{y} \\
+		(x-1)^2 &= y \\
+		\func{x} &= (x-1)^2
+	\end{align*}
+}
+\qsp{c}{
+	\includegraphics[width=\textwidth / 3]{x3c}
+}
+\qsp{d}{
+	\begin{align*}
+		1 + \sqrt{x} &= (x-1)^2 \\
+		\sqrt{x} &= x^2 - 2x \\
+		x &= \left( x^2 - 2x \right) ^2 \\
+		0 &= x^4 - 4x^3 + 4x^2 - x
+	\end{align*}
+	We could say that \(x = 0\), but we can see it is invalid on the graph and ignore it.
+	\begin{align*}
+		\func{x} &= x^3 - 4x^2 + 4x - 1 \\
+		\func{1} &= 1 - 4 + 4 - 1 = 0 \\
+		0 &= (x-1)(x^2 + bx + 1) \\ 
+		0 &= \ldots - x^2 + bx^2 + \ldots \\
+		-1 + b &= -4 \\
+		b &= -3 \\
+		\func{x} &= (x-1)(x^2-3x+1)
+	\end{align*}
+	We could say that \(x = 1\), but we can see it is invalid on the graph and ignore it.
+	\begin{align*}
+		0 &= x^2 - 3x + 1 \\
+		x &= \frac{-b \pm \sqrt{b^2-4ac}}{2a} \\
+		&= \frac{3 \pm \sqrt{9 - 4}}{2} \\
+	\end{align*}
+	We could say that \(x = \frac{3 - \sqrt{5}}{2}\), but we can see it is invalid on the graph and ignore it.
+	\[ x = \frac{3 + \sqrt{5}}{2} \]
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		\frac{\Delta y}{\Delta x} &= \frac{3y^2 - 4}{y^3-4y} \\
+		\differen &= \frac{y^3-4y}{3y^2-4} \\
+		2 &= \frac{y^3-4y}{3y^2-4} \\
+		1 &= \frac{y^3-4y}{6y^2-8} \\
+		6y^2 - 8 &= y^3 - 46 \\
+		y^3 &= 6y^2 + 38 \\
+		y &= \frac{6y^2 + 38}{y^2} \\
+		???
+	\end{align*}
+}
+\qsp{b}{
+	???
+}
+}
+
+\qs{
+\begin{align*}
+	\differen &= (-1) \left(4e^{2-x}\right)-(-2) \left(e^{4-2x}\right) \\
+			  &= -4e^{2-x} + 2e^{4-2x} \\
+	0 &= -4e^{2-x} + 2e^{4-2x} \\
+	2e^{2-x} &= e^{4-2x} \\
+	2e^{2-x} &= \left( e^{4-2x} \right) ^2 \\ \\
+	\text{Let } y &= e^{2-x} \\
+	2y &= y^2 \\
+	0 &= y^2 - 2y \\
+	y &= 0, 2 \\
+	\ln{0} &\nequiv \bbR \\
+	e^{2-x} &= 2 \\
+	x &= 2 - \ln{2} \\
+	&= 1.307 \\ \\
+	y &= 4e^{2-x} - e^{4-2x} \\
+	&= 4 \\ \\
+	\differen_{1.25} &= 0.49 \\
+	\differen_{1.307} &= 0 \\
+	\differen_{1.35} &= -0.32 \\
+\end{align*}
+\begin{itemize}
+	\ii Stationary Point = \((1.307, 4)\)
+	\ii Kind = Maximum
+\end{itemize}
+}
+
+\qs{
+\qsp{a}{
+	???
+}
+\qsp{b}{
+	\begin{align*}
+		R \cos \left( \theta - \alpha \right) &= R\cos \theta \cos \alpha + R\sin \theta \sin \alpha \\
+		\\
+		R \sin \alpha &= 2 \\
+		R \cos \alpha &= 5 \\
+		\tan \alpha &= \frac{2}{5} \\
+		\alpha &= 21.8 \\
+		\\
+		R^2 &= 5^2 + 2^2 \\
+		R &= \sqrt{25 + 4} \\
+		R &= \sqrt{29} \\
+		\\
+		5\cos \theta + 2\sin \theta &\equiv \sqrt{29} \cos \left( \theta - 21.8 \dg \right)
+	\end{align*}
+}
+\qsp{c}{
+	???
+}
+}
+
+\qs{
+\qsp{a}{
+\begin{enumerate}
+	\ii Take the natural logarithm of x value.
+	\ii Shift the graph right by 12 units.
+	\ii Shrink the graph horizontally by a factor of 4.
+\end{enumerate}
+}
+\qsp{b}{
+	\includegraphics[width=\textwidth / 3]{x7b}
+}
+}
+
+\qs{
+	
+}
+
+\end{document}
