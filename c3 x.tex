@@ -23,17 +23,17 @@
 		\noindent
 		\begin{align*}
 			v &= 4x - 11 \\
-			v\prime &= 4 
+			v^\prime &= 4 
 		\end{align*}
 		\pagebreak
 		\begin{align*}
 			u &= x^2 - 6x + 12 \\
-			u\prime &= 2x - 6
+			u^\prime &= 2x - 6
 		\end{align*}
 	\end{multicols}
 	\noindent
 	\begin{align*}
-		\differen &= \frac{vu\prime - v\prime u}{v^2} \\
+		\differen &= \frac{vu^\prime - v^\prime u}{v^2} \\
 				  &= \frac{(4x-11)(2x-6) - 4(x^2-6x+12)}{(4x-11)^2} \\
 				  &= \frac{8x^2 -46x + 66 - 4x^2 + 24x - 48}{(4x-11)^2} \\
 				  &= \frac{4x^2 -22x + 18}{(4x-11)^2} \\
@@ -134,11 +134,10 @@
 	\begin{align*}
 		\frac{\Delta y}{\Delta x} &= \frac{3y^2 - 4}{y^3-4y} \\
 		\differen &= \frac{y^3-4y}{3y^2-4} \\
-		2 &= \frac{y^3-4y}{3y^2-4} \\
-		1 &= \frac{y^3-4y}{6y^2-8} \\
-		6y^2 - 8 &= y^3 - 46 \\
-		y^3 &= 6y^2 + 38 \\
-		y &= \frac{6y^2 + 38}{y^2} \\
+		2 &= \frac{3y^2-4}{y^3-4y} \\
+		1 &= \frac{3y^2-4}{2y^3-8y} \\
+		2y^3-8y &= 3y^2-4
+		y &= \frac{3y^2-4}{2y^2-8} \\
 		???
 	\end{align*}
 }
@@ -213,7 +212,46 @@
 }
 
 \qs{
-	
+\qsp{a}{
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= x \\
+			v^\prime &= 1 \\
+		\end{align*}
+		\begin{align*}
+			u &= \sqrt{x+1} \\
+			u^\prime &= \frac{1}{2}(x+1)^{-\frac{1}{2}}
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen &= vu^\prime + v^\prime u \\
+		&= x\frac{1}{2}(x+1)^{-\frac{1}{2}} + (x+1)^{\frac{1}{2}} \\
+		&= (x+1)^{-\frac{1}{2}}\left( x\frac{1}{2} + (x+1) \right) \\
+		&= (x+1)^{-\frac{1}{2}}\left( \frac{3}{2}x+1 \right) \\
+		&= \frac{1}{2}(3x+2)(x+1)^{-\frac{1}{2}}
+	\end{align*}
+}
+\qsp{b}{
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= x\sqrt{x+1} \\
+			v^\prime &= \frac{1}{2}(3x+2)(x+1)^{-\frac{1}{2}}
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			u &= \sin 2x \\
+			u^\prime &= 2\cos 2x
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen &= vu^\prime + v^\prime u \\
+		&= \left( x\sqrt{x+1} \right) \left( 2\cos 2x \right) + \left( \frac{1}{2}(3x+2)(x+1)^{-\frac{1}{2}} \right) \left( \sin 2x \right) \\
+		&= \left( \frac{\pi}{2}\sqrt{\frac{\pi}{2}+1} \right) \left( 2\cos \pi \right) + \left( \frac{1}{2}(3\frac{\pi}{2}+2)(\frac{\pi}{2}+1)^{-\frac{1}{2}} \right) \left( \sin \pi \right)
+		&= -2 \left( \frac{\pi}{2}\sqrt{\frac{\pi}{2}+1} \right)
+	\end{align*}
+}
 }
 
 \end{document}
