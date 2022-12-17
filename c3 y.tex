@@ -16,12 +16,157 @@
 \maketitle
 
 \qs{
-	\begin{multicols}[2]
-		\noindent
-		\[ y = e^{-x} \sin x \]
+	\begin{multicols}{2}
+		\begin{multicols}{2}
+			\noindent
+			\begin{align*}
+				v &= e^{-x} \\
+				v^\prime &= -e^{-x}
+			\end{align*}
+			\columnbreak
+			\begin{align*}
+				u &= \sin x \\
+				u^\prime &= \cos x 
+			\end{align*}
+		\end{multicols}
+		\begin{align*}
+			\differen &= vu^\prime + v^\prime u \\
+			&= e^{-x}\cos x + -e^{-x} \sin x \\
+			0 &= e^{-x}\cos x -e^{-x} \sin x \\
+			&= \left( e^{-x} \right) \left( \cos x - \sin x \right) \\
+			e^{-x} \nequiv \bbR \\
+			0 &= \cos x - \sin x \\
+			\cos x &= \sin x \\
+			\tan x &= 1 \\
+			x &= \frac{1}{4}\pi
+		\end{align*}
+	
 		\columnbreak
-		Hello World!
+		
+		\begin{align*}
+			e^{-x} &= e^{-x} \sin x \\
+			1 &= \sin x \\
+			x &= \frac{1}{2}\pi 
+		\end{align*}
 	\end{multicols}
+	\begin{align*}
+		&= \frac{1}{2} \pi - \frac{1}{4} \pi \\
+		&= \frac{1}{4} \pi
+	\end{align*}
 }
+
+\qs{
+\qsp{a}{
+	\[ R \sin \left( x + \alpha \right) \equiv R \sin \alpha \cos x + R \sin \alpha \cos x \]
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			R^2 &= 2^2 + 1^2 \\
+			R &= \sqrt{5}
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			2 &= \sin \alpha \\
+			1 &= \cos \alpha \\
+			\tan \alpha &= 2 \\
+			\alpha &= 1.107
+		\end{align*}
+	\end{multicols}
+	\[ 2\cos x + \sin x \equiv \sqrt{5}\sin \left( x + 1.107 \right) \]
+}
+\qsp{b}{
+	\[ - \sqrt{5} \le \func{x} \le \sqrt{5} \]
+	\begin{align*}
+		\func[g]{- \sqrt{5}} &= \frac{5}{5 + 5} = 2 \\
+		\func[g]{0} &= \frac{5}{0 + 5} = 1 \\
+		\func[g]{\sqrt{5}} &= \frac{5}{5 + 5} = 2 \\
+	\end{align*}
+	\[ 1 \le \func[g]{\func{x}} \le 2\]
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		10 &= Ae^{-k*0} \\
+		A &= 10 \\ \\
+		5 &= Ae^{-5k} \\
+		5 &= 10e^{-5k} \\
+		\frac{1}{2} &= e^{-5k} \\
+		-5k &= \ln \frac{1}{2}  \\
+		5k &= \ln 2 \\
+		k &= \frac{1}{5} \ln 2
+	\end{align*}
+}
+\qsp{b}{
+	\begin{align*}
+		M &= 10e^{-\frac{1}{5}t} \\
+		\differen[M] &= \left( -\frac{1}{5} \right) \left(10e^{-\frac{1}{5}t} \right) \\
+		&= -2e^{-\frac{1}{5}t} \\
+		\ln \left( \frac{1}{\sqrt{2}} \right) &= -2e^{-\frac{1}{5}t} \\
+		\ln \sqrt{2} &= 2e^{-\frac{1}{5}t} \\
+		\ln \sqrt[4]{2} &= e^{-\frac{1}{5}t} \\
+		-\frac{1}{5}t &= \ln \left( \ln \sqrt[4]{2} \right) \\
+		t &= -5 \ln \left( \ln \sqrt[4]{2} \right) \\
+		t &= 8.764
+	\end{align*}
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		&= \tan 2x \\
+		&= \frac{\sin 2x}{\cos 2x} \\
+	\end{align*}
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= \cos 2x \\
+			v^\prime &= -2 \sin 2x
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			u &= \sin 2x \\
+			u^\prime &= 2 \cos 2x \\
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen[] &= \frac{vu^\prime - v^\prime u}{v^2} \\
+		&= \frac{2\cos^2 2x + 2\sin^2 2x}{\cos^2 2x} \\
+		&= \frac{2}{\cos^2 2x} \\
+		&= 2 \sec^2 2x
+	\end{align*}
+}
+\qsp{b}{
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= 6x \\
+			v^\prime &= 6 \\
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			u &= \tan 2x \\
+			u^\prime &= 2 \sec^2 2x
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen &= vu^\prime + v^\prime u \\
+		&= 12x \sec^2 2x + 6 \tan 2x \\
+		\differen_{\frac{1}{8}\pi} &= \frac{12}{8}\pi \sec^2 \frac{1}{4}\pi + \tan \frac{1}{4}\pi \\
+		&= 3\pi + 1 \\ \\
+		y &= 6x \tan 2x \\
+		&= \frac{6}{8}\pi \tan \frac{2}{8}\pi \\
+		&= \frac{3}{4}\pi \\ \\
+		y - y_1 &= m \left( x - x_1 \right)  \\
+		y - \frac{3}{4}\pi &= (3\pi + 1)\left( x - \frac{1}{8}\pi \right) \\
+		y &=  (3\pi + 1)x - \frac{3\pi + 1}{8}\pi + \frac{3}{4}\pi \\
+		\therefore c &= - \frac{3\pi + 1}{8}\pi + \frac{3}{4}\pi \\ %this is wrong somewhere, too tired to work out
+		&= 
+	\end{align*}
+}
+}
+
 	
 \end{document}
