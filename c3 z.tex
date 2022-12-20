@@ -1,0 +1,237 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\input{preamble}
+\input{macros}
+
+\graphicspath{{./images/}}
+
+\title{\huge{C3 Z}}
+\author{\huge{Jack Maguire}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\qs{
+\begin{align*}
+	x &= \ln \left( y^2 + 9 \right)^\frac{3}{2} \\
+	  &= \left( \ln \left( y^2 + 9 \right) \right) ^\frac{3}{2} \\
+	u &= \ln \left( y^2 + 9 \right) \\
+	\frac{\Delta u}{\Delta x} &= \frac{2y}{y^2 + 9} \\
+		\frac{\Delta y}{\Delta x} &= \frac{3}{2} \left( \ln \left( y^2 + 9 \right) \right) ^ \frac{1}{2} \frac{2y}{y^2 + 9} \\
+	&= \frac{6y}{2y^2 + 18} \sqrt{\ln \left( y^2 + 9 \right)} \\
+\end{align*}
+\text{Question wrong? Cannot get to simplify and desmos disagrees}
+}
+\qs{
+\begin{align*}
+	\frac{\sin 2 \phi}{\sin \phi} - \frac{\cos 2 \phi}{\cos \phi} &\equiv \sec \phi \\
+	\textbf{LHS} &\equiv \frac{\sin 2 \phi}{\sin \phi} - \frac{\cos 2 \phi}{\cos \phi} \\
+	&\equiv \frac{2 \sin  \cos \phi}{\sin \phi} - \frac{2\cos^2 \phi - 1}{\cos \phi} \\
+	&\equiv 2 \cos \phi - 2\cos \phi + \sec \phi \equiv \sec \phi \equiv \textbf{RHS} \qed
+\end{align*}
+}
+
+\qs{
+\qsp{a}{
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &=  1 + 2 \ln x \\
+			v^\prime &= \frac{2}{x}
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			u &= x \\
+			u^\prime &= 1
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen &= \frac{vu^\prime  - v^\prime u}{v^2} \\
+		&= \frac{1 + 2 \ln x - \frac{2x}{x}}{(1 + 2 \ln x)^2} \\
+		&= \frac{2 \ln x - 1}{1 + 4 \ln x + 4 (\ln x)^2} \\
+		0 &= \frac{2 \ln x - 1}{1 + 4 \ln x + 4 (\ln x)^2} \\
+		0 &= 2 \ln x - 1 \\
+		\frac{1}{2} &= \ln x \\
+		x &= e^\frac{1}{2} = \sqrt{e} \\
+		y &= \frac{x}{1 + 2 \ln x} \\
+		  &= \frac{\sqrt{e}}{1 + 1} \\
+		  &= \frac{1}{2}\sqrt{e} \\
+		\text{TP} &= (\sqrt{e}, \frac{1}{2}\sqrt{e})
+	\end{align*}
+}
+\qsp{b}{
+	\begin{multicols}{2}
+		\noindent
+		\begin{align*}
+			v &= (1 + 2 \ln x)^2 \\
+			v^\prime &= \frac{4 + 8 \ln x}{x}
+		\end{align*}
+		\columnbreak
+		\begin{align*}
+			u &= 2\ln x - 1 \\
+			u^\prime &= \frac{2}{x}
+		\end{align*}
+	\end{multicols}
+	\begin{align*}
+		\differen &= \frac{vu^\prime  - v^\prime u}{v^2} \\
+		\twodifferen &= \frac{\frac{2}{x}(1 + 2 \ln x)^2 - \frac{4 + 8 \ln x}{x}(2\ln x - 1)}{(1 + 2 \ln x)^4} \\
+		\twodifferen_{\sqrt{e}} &= \frac{\frac{2}{\sqrt{e}}(1 + 1)^2 - \frac{4 +4}{\sqrt{e}}(1 - 1)}{(1 + 1)^4} \\
+		&= \frac{\frac{2}{\sqrt{e}}}{(1 + 1)^2} \\
+		&= \frac{2}{4\sqrt{e}} \\
+		&= \frac{1}{2\sqrt{e}} 
+	\end{align*}
+	\( \frac{1}{2\sqrt{e}} > 0 \therefore \) is a minimum point.
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		x &= \tan y \\
+		\frac{\Delta x}{\Delta y} &= \sec^2 y \\
+		\frac{\Delta y}{\Delta x} &= \cos^2 x \\
+		\textbf{???}
+	\end{align*}
+}
+\qsp{b}{
+	\begin{align*}
+		\differen &= 1 + x^2 - \frac{8}{1+x^2} - 6x \\
+		&= x^2 - 6x - \frac{8}{1+x^2} + 1 \\
+		0 &= x^2 - 6x - \frac{8}{1+x^2} + 1 \\
+		&= \left( 1 + x^2 \right)x^2 - \left( 1 + x^2 \right)6x - 8 + \left( 1 + x^2 \right) \\
+		&= x^2 + x^4 - 6x - 6x^3 -8 + 1 + x^2 \\
+		&= x^4 - 6x^3 + 2x^2 -6x - 7 \\
+		& \textbf{???}
+	\end{align*}
+}
+\qsp{c}{
+	\begin{align*}
+		\func{x} &= 6x^3+14x-1
+		\func{0} &= -1 \\
+		\func{1} &= 19 \\
+	\end{align*}
+	Between positive and negative \( \therefore \) root inbetween.
+}
+\qsp{d}{
+	\textbf{???}
+}
+\qsp{e}{
+	\textbf{???}
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		H &= k \left( 1 - e^{-\frac{1}{12}t} \right) \\
+		41 &= k \left( 1 - e^{-\frac{5}{12}} \right) \\
+		\frac{41}{k} &= 1 - e^{-\frac{5}{12}} \\
+		k &= \frac{41}{1 - e^{-\frac{5}{12}}} \\
+		k &= 120.319 \ldots \\
+		&= 120
+	\end{align*}
+}
+\qsp{b}{
+	\begin{align*}
+		H &= 120 \left( 1 - e^{-\frac{1}{12}t} \right) \\
+		\frac{90}{120} &= 1 - e^{-\frac{1}{12}t} \\
+		\frac{1}{4} &= e^{-\frac{1}{12}t} \\
+		\ln \frac{1}{4} &= -\frac{1}{12} t \\
+		-12t &= - \ln 4 \\
+		t &= 12 \ln 4 \\
+		&= 24 \ln 2
+	\end{align*}
+}
+\qsp{c}{
+	\begin{align*}
+		H &= 120 \left( 1 - e^{-\frac{1}{12}t} \right) \\
+		\frac{H}{120} &= 1 - e^{-\frac{1}{12}t} \\
+		1 - \frac{H}{120} &= e^{-\frac{1}{12}t} \\
+		-\frac{1}{12}t &= \ln \left( 1 - \frac{H}{120} \right) \\
+		t &= -12 \ln \left( 1 - \frac{H}{120} \right) \\
+		\\
+		H &= 120 \left( 1 - e^{-\frac{1}{12}t} \right) \\
+		a &= 1 - e^{-\frac{1}{12}t} \\
+		\frac{\Delta t}{\Delta t} &= \frac{1}{12} e^{-\frac{1}{12}t} \\
+		\frac{\Delta H}{\Delta t} &= 120\frac{1}{12} e^{-\frac{1}{12}t} \\
+		&= 10 e^{-\frac{1}{12}t} \\
+		&= 10e^{-12 \ln \left( 1 - \frac{H}{120} \right)} \\
+		&= \frac{-10}{12} H
+	\end{align*}
+}
+\qsp{d}{
+	\begin{align*}
+		\frac{\Delta H}{\Delta t} &= \frac{-10}{12} H
+		\frac{\Delta H}{\Delta t}_7.5 &= -\frac{-10}{12}7.5 \\
+		&= \frac{-25}{4} \\
+	\end{align*}
+}
+\qsp{e}{
+	\begin{align*}
+		\frac{\Delta H}{\Delta t} &= 120\frac{1}{12} e^{-\frac{1}{12}t} \\
+		0 &= 10 e^{-\frac{1}{12}t} \\
+		e^{-\frac{1}{12}t} &= 0 \\
+	\end{align*}
+	Since \(\bbR \nsubseteq \ln 0\), we can see that this model exponentially grows, that is, there is no maximum height.
+}
+}
+
+\qs{
+\qsp{a}{
+	\[ 	2 \leq \func{x} \leq 4 \]
+	\[ a = 3 \]
+	\[ \pi \to 2 \pi \therefore b = 0.5 \]
+}
+\qsp{b}{
+	\begin{align*}
+		y &= 3 + \cos \frac{x}{2} \\
+		x &= 3 + \cos \frac{y}{2} \\
+		\cos \frac{y}{2} &= x - 3\\
+		y &= 2 \cos^{-1} ( x - 3 ) \\
+	\end{align*}
+}
+\qsp{c}{
+	\[ 2 \leq x \leq 4 \]
+	\[ 0 \leq \func{x} \leq 2 \pi \]
+}
+\qsp{d}{
+	\begin{align*}
+		\differen &= -\frac{1}{2} \sin \frac{x}{2}
+		\differen_{\frac{4}{3}\pi} &= -\frac{1}{2} \sin \frac{2\pi}{3} \\
+		&= -\frac{1}{2} \frac{\sqrt{3}}{2} \\
+		&= -\frac{\sqrt{3}}{4} 
+	\end{align*}
+}
+\qsp{e}{
+\[ -\frac{\sqrt{3}}{4}  \]
+}
+}
+
+\qs{
+\qsp{a}{
+	\begin{align*}
+		\sin P + \sin Q  &\equiv 2 \sin \left( \frac{P+Q}{2} \right) \cos \left( \frac{P-Q}{2} \right) \\
+		\textbf{RHS} &\equiv 2 \sin \left( \frac{P+Q}{2} \right) \cos \left( \frac{P-Q}{2} \right) \\
+		&\equiv 2 \sin \left( \frac{P}{2} + \frac{Q}{2} \right) \cos \left( \frac{P}{2} - \frac{Q}{2} \right) \\
+		&\equiv 2 \left( \sin \frac{P}{2} \cos \frac{Q}{2} + \sin \frac{Q}{2} \cos \frac{P}{2} \right) \left( \cos \frac{P}{2} \cos \frac{Q}{2} + \sin \frac{P}{2} \sin \frac{Q}{2}  \right) \\
+		&\equiv 2 \left( \sin \frac{P}{2} \cos \frac{P}{2} \cos^2 \frac{Q}{2} + \sin^2 \frac{P}{2} \sin \frac{Q}{2} \cos \frac{Q}{2} + \sin \frac{Q}{2} \cos^2 \frac{P}{2} \cos \frac{Q}{2} + \sin \frac{P}{2} \sin^2 \frac{Q}{2} \cos \frac{P}{2} \right) \\
+		& \textbf{???} \\
+		&\equiv \sin P + \sin Q \equiv \text{RHS} \qed
+	\end{align*}
+}
+\qsp{b}{
+	\begin{align*}
+		\sin \theta - \sin 3 \theta + \sin 5 \theta &= 0 
+		\textbf{???}
+	\end{align*}
+}
+}
+
+\qs{
+	\includegraphics[width=\textwidth / 3]{z8}
+}
+	
+\end{document}
